@@ -6,9 +6,15 @@ public class Numbers {
 
         System.out.println(num1+num2);
 
-        int result = num1 / num2;
+        double result = (double) num1 / (double) num2;
 
         System.out.println(result);
+
+        int num3 = 8;
+
+        System.out.printf("Predicted 8, actual: %s\n", num3++);
+        System.out.printf("Predicted 9, actual: %s\n", num3);
+        System.out.printf("Predicted 10, actual: %s\n", ++num3);
 
     }
 }
