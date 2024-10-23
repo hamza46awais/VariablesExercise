@@ -10,18 +10,25 @@ public class Hangman {
         Scanner scanner = new Scanner(System.in);
         String answer = "MANNER";
         String usersAnswer = "------";
+        boolean gameOngoing = true;
 
-        System.out.println("Guess: ");
-        String guessStr = (scanner.nextLine()).toUpperCase();
-        char guessChar = (guessStr.charAt(0));
+        while (gameOngoing) {
 
-        for (int i = 0; i < answer.length(); i++) {
-            char c = answer.charAt(i);
+            System.out.println("Guess: ");
+            String guessStr = (scanner.nextLine()).toUpperCase();
+            char guessChar = (guessStr.charAt(0));
 
-            if (guessChar == c){
-                usersAnswer = usersAnswer.substring(0,i)+guessChar+usersAnswer.substring(i+1);
-                System.out.println(usersAnswer);
+            for (int i = 0; i < answer.length(); i++) {
+                char c = answer.charAt(i);
+
+                if (guessChar == c) {
+                    usersAnswer = usersAnswer.substring(0, i) + guessChar + usersAnswer.substring(i + 1);
+                    System.out.println(usersAnswer);
+                }
+
+                if (usersAnswer.equals(answer)) gameOngoing = false;
             }
+
         }
 
     }
