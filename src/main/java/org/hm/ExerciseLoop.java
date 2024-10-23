@@ -1,6 +1,6 @@
 package org.hm;
 
-public class ExerciseConditional {
+public class ExerciseLoop {
 
 
     public static void main(String[] args) {
