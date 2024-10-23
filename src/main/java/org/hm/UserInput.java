@@ -7,9 +7,12 @@ public class UserInput {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Input name: ");
-        String name = scanner.nextLine();
-        System.out.printf("Hello %s!\n", name);
+        System.out.println("Input first name: ");
+        String firstName = scanner.nextLine();
+        System.out.println("Input last name: ");
+        String lastName = scanner.nextLine();
+
+        System.out.printf("Hello %s!\n", (firstName + " " + lastName));
 
         System.out.println("Please input number1: ");
         int num1 = Integer.parseInt(scanner.nextLine());
